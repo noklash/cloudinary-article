@@ -8,7 +8,7 @@ const FormField = () => {
         image: "",
         caption: ""
     })
-    console.log(post.caption)
+    // console.log(post.caption)
 
     const handleChange = (fiedName, value) => {
         setPost((prev) => ({...prev, [fiedName]: value}))
