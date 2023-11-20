@@ -1,6 +1,7 @@
 "use client"
 import React, {useState} from 'react'
 import Image from 'next/image'
+import { uploadImage } from '@/lib/actions'
 
 
 const FormField = () => {
@@ -14,7 +15,10 @@ const FormField = () => {
         setPost((prev) => ({...prev, [fiedName]: value}))
     }
 
-    const handleChangeImage = (e) => {
+    // const imageUr = uploadImage(post.image)
+    // console.log(`image url is ${imageUr}`)
+
+    const handleChangeImage = async (e) => {
         e.preventDefault();
         const imageFile = e.target.files?.[0];
         if (!imageFile) return ;
@@ -25,11 +29,16 @@ const FormField = () => {
         const reader = new FileReader();
         reader.readAsDataURL(imageFile);
 
-        reader.onload = () => {
+        reader.onload = async () => {
             const result = reader.result
-            handleChange("image", result)
+            // console.log(`result is ${result}`)
+            const imageUr = await uploadImage(result)
+            handleChange("image", imageUr.url)
+            console.log(`image url is ${imageUr.url}`)
         };
     };
+
+    const hide = post.image ? "hidden" : ""
 
   return (
     <form>
@@ -42,6 +51,7 @@ const FormField = () => {
                 type='file'
                 accept='image/*'
                 required
+                className={`${hide}`}
                 onChange={(e) => handleChangeImage(e)}
             />
         

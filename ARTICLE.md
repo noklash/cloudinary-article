@@ -55,3 +55,5 @@ back to the root folder, open the app directory and oprn the index page which is
 for the purpose of this tutorial we'll be creating a simple app that uploads an image and text from a form field.
 
 # here
+
+Be sure to update your next.config file with with the domain name for cloudinary images to avaod next js error on successful upload
