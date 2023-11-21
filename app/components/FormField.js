@@ -63,11 +63,15 @@ const FormField = () => {
                     required
                     onChange={(e) => handleChangeImage(e)}
                 />
+
+                {loading && <div className='border-dashed border-white border-2 m-3 w-56 flex justify-center'>
             
-                <ClipLoader color="#36d7b7" loading={loading} />
+                    <ClipLoader color="#36d7b7" loading={loading} />
+                </div>}
 
                 {post.image && (
-                    <div className='border-dashed border-white border-2 m-3 w-56'>
+                    <div className='border-dashed border-white border-2 m-3 w-56 flex justify-center'>
+                        
                         <Image
                             src={post.image}
                             className="p-5"
