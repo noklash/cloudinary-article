@@ -44,7 +44,7 @@ const FormField = () => {
         };
     };
 
-    const hide = post.image ? "hidden" : ""
+    // const hide = post.image ? "hidden" : ""
     
 
   return (
@@ -54,14 +54,13 @@ const FormField = () => {
         <form>
             <div className=''>
                 <label className=''>
-                    {!post.image && "choose an image"}
+                    {!post.image && <span className='py-2 px-2'>choose an image</span>}
                 </label>
                 <input
                     id='image'
                     type='file'
                     accept='image/*'
                     required
-                    // className={`${hide}`}
                     onChange={(e) => handleChangeImage(e)}
                 />
             
@@ -72,7 +71,6 @@ const FormField = () => {
                         <Image
                             src={post.image}
                             className="p-5"
-                            // w-48 h-32 p-10 object-contain
                             width={200}
                             height={170}
                             alt='image post'
