@@ -8,7 +8,8 @@ cloudinary.config({
 });
 
 export async function POST(request){
-    const { path } = await request.json();
+    const { path } = await request.body
+    console.log(request.body)
 
     if (!path){
         return NextResponse.json({ message: "Image path is required"}, {status: 400});
