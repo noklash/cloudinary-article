@@ -1,4 +1,4 @@
-HOW TO UPLOAD IMGAGES ON YOUR Next Js APP USING CLOUDINARY
+HOW TO UPLOAD IMGAGES ON YOUR NEXT JS APP USING CLOUDINARY
 
 WHAT IS CLOUDINARY? 
 cloudinary is an image management solution that supports image uploads, cloud storage, image manipulatons, image optimization for the web and delivery. 
@@ -6,15 +6,14 @@ it offers secure upload api, version management, remote upload from public urls,
 
 Having had an overview of cloudinary, let's dive in to how we can utilize cloudinary for image delivery in our full stack Next Js appliction.
 
-To continue with the procedures requires a basic knowledge of REACT and Next js in order to get a full grasp.
+To get a full grasp requires a basic knowledge of REACT and Next js in order .
 
-#Having a basic knowledge of Next js will help better understand the upcoming procedures.
 
 first we create a next Js application by running any of the following in your terminal: 
 #npx create-next-app@latest
 #yarn create next-app
 
-you will then be asked the following prompts:
+Then answer the following prompts:
 #the prompts for creating a next app.
 
 
