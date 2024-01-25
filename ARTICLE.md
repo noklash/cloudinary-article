@@ -1,6 +1,6 @@
 HOW TO UPLOAD IMGAGES ON YOUR Next Js APP USING CLOUDINARY
 
-WhAT IS CLOUDINARY? 
+WHAT IS CLOUDINARY? 
 cloudinary is an image management solution that supports image uploads, cloud storage, image manipulatons, image optimization for the web and delivery. 
 it offers secure upload api, version management, remote upload from public urls, direct uploading from the browser, image transformation on upload, supports private images.
 
